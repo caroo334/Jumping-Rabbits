@@ -1,0 +1,287 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow-y: hidden;
+    counter-reset: score;
+  }
+
+  .phone {
+    position: relative;
+    border: 8px solid black;
+    border-radius: 40px;
+    height: 600px;
+    width: 300px;
+    background-color: #CCEFFF;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+
+  .layer {
+    position: absolute;
+    height: 450px;
+    width: 80px;
+    background-color: white;
+    border-radius: 20px;
+
+  }
+
+  .land {
+    position: absolute;
+    width: 220px;
+    height: 400px;
+    bottom: 0;
+    background-color: #B7584D;
+    border-top: #58BD60 10px solid;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 2px 4px 10px black;
+  }
+
+  .layer-1 {
+      position: absolute;
+      z-index: 1;
+      height: 450px;
+      width: 80px;
+      bottom: 0;
+      right: 60px;
+      animation-name: layer;
+      animation-duration: 2s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+  }
+  @keyframes layer{
+      0%{
+          bottom: 0;
+      }
+      25%{
+          bottom:  -80px;
+      }
+      100%{
+          bottom: 0;
+      }
+  }
+  input{
+      position: absolute;
+      appearance: none;
+      cursor: pointer;
+      z-index: 1;
+      width: 100%;
+      height: 80px;
+  }
+   input[type="checkbox"]:checked{
+      counter-increment: score;
+  }
+  .layer-2 {
+      position: absolute;   
+      z-index: 2;
+      height: 450px;
+      width: 80px;
+      bottom: 0;
+      left: 60px;
+      animation-name: layer;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+  }
+  .layer-3 {
+      position: absolute;
+      z-index: 3;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 220px;
+      height: 400px;
+      background: #CCE;
+      bottom: 0;
+      border-radius: 20px;
+  }
+  .layer-4 {
+      position: absolute;    
+      z-index: 4;
+      height: 350px;
+      width: 80px;
+      bottom: 0;
+      left: 10px;
+      animation-name: layer;
+      animation-duration: 3s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+
+  }
+  .layer-5 {
+      position: absolute;
+      z-index: 5;
+      left: 0;
+      right: 20;
+      margin: 0 auto;
+      width: 220px;
+      height: 300px;
+      background: #CCE;
+      bottom: 0;
+      border-radius: 20px;
+      box-shadow: 0 15px 20px rgb(0, 0, 0, 0.22), 0 15px 20px rgb(0, 0, 0, 0.22);
+  }
+  .layer-6 {
+      position: absolute;  
+      z-index: 6;
+      height: 250px;
+      width: 80px;
+
+      bottom: 0;
+      right: 25px;
+      animation-name: layer;
+      animation-duration: 2.5s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+    
+  }
+  .layer-7 {
+      position: absolute;   
+      z-index: 7;
+      left: 50;
+      right: 0;
+      margin: 0 auto;
+      width: 150px;
+      height: 200px;
+      background: #CCE;
+      bottom: 0;
+      border-radius: 20px;
+      box-shadow: 0 15px 20px rgb(0, 0, 0, 0.22), 0 15px 20px rgb(0, 0, 0, 0.22);
+  }
+
+  .layer-8 {
+    position: absolute;
+    z-index: 8;
+    bottom: 0;
+
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+
+    width: 125px;
+    height: 100px;
+    background-color: #57BD60;
+    border-radius: 50px 50px 0 0;
+
+  }
+
+  .layer-9 {
+    position: absolute;
+    z-index: 9;
+    bottom: 0;
+    left: 0;
+
+    width: 125px;
+    height: 110px;
+    background-color: white;
+    border-radius: 0 50px 0 30px;
+
+  }
+
+  .layer-10 {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    right: 0;
+    width: 125px;
+    height: 110px;
+    background-color: white;
+    border-radius: 50px 0 30px 0;
+    
+  }
+  .left-ear--outer{
+      background: white;
+      border-radius: 90%;
+      width: 20px;
+      height: 50px;
+      position: absolute;
+      left: 10px;
+  }
+  .left-ear--inner{
+      background: pink;
+      border-radius: 90%;
+      width: 10px;
+      height: 50px;
+      position: absolute;
+      left: 15px;
+      top: 8px;
+  }
+  .right-ear--outer{
+      background: white;
+      border-radius: 90%;
+      width: 20px;
+      height: 50px;
+      position: absolute;
+      right: 10px;
+  }
+  .right-ear--inner{
+      background: pink;
+      border-radius: 90%;
+      width: 10px;
+      height: 50px;
+      position: absolute;
+      right: 15px;
+      top: 8px;
+  }
+  .head{
+      background: white;
+      border-radius: 50%;
+      height: 80px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      position: absolute;
+      top: 30px;
+      width: 100%;
+  }
+  .head__eye{
+      background: gray;
+      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+      position: absolute;
+      top: 15px;
+      animation-name: blink;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+  }
+  @keyframes blink{
+      0%{
+          height: 6px;
+      }
+      5%{
+          transform: translate(0px, 2px);
+          height: 1px;
+      }
+      10%{
+          height: 6px;
+      }
+  }
+  .head__eye--left{
+      left: 25px ;
+  }
+  .head__eye--right{
+      transform: translate(0px, 0px);
+      right: 25px;
+  }
+  .pasto{
+   width: 100%;
+   height: 100px;
+   background: linear-gradient(-135deg, teal 15%, transparent 15%) -50px 0,
+   linear-gradient(-135deg, rgb(19, 88, 128) 20%, transparent 20%) -50px 0,
+   linear-gradient(135deg, teal 15%, transparent 15%) -50px 0,
+   linear-gradient(135deg, rgb(19, 88, 128) 20%, transparent 20%) -50px 0;
+   background-size: 50px;
+   border-radius: 20px;
+   border-top: 20px solid teal;
+  }
+.score::after {
+      content: " " counter(score);
+  }
+
+.title{
+ position: absolute;
+ z-index: 11;
+ top: 60px;  
+}
